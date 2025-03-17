@@ -3,15 +3,8 @@ import { useState } from "react";
 import { Heart, MessageCircle, Send, Bookmark } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
-interface PostProps {
-  username: string;
-  userImage: string;
-  image: string;
-  caption: string;
-  likes: number;
-}
 
-export const Post = ({ username, userImage, image, caption, likes }: PostProps) => {
+export const Post = ({ username, userImage, image, caption, likes }) => {
   const [isLiked, setIsLiked] = useState(false);
   const [likesCount, setLikesCount] = useState(likes);
 
